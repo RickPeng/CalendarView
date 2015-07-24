@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.pxk.ui.CalendarBox xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/orange" >
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="126dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/weekView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="第四周"
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/yearView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2015年"
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/monthView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/linearLayout1"
+            android:text="7月"
+            android:textColor="@android:color/white"
+            android:textSize="30sp" />
+    </RelativeLayout>
+
+    <com.pxk.ui.WeekView
+        android:id="@id/weekView"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/relativeLayout1" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/calendarViewPager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/weekView" />
+
+</com.pxk.ui.CalendarBox>
